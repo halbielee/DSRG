@@ -229,6 +229,21 @@ This case, you are using Opencv under 3. Comment some line in Makefile.config.
 ```
 
 
+##### 5) UNIX time
+
+##### Error Message
+
+```
+*** Aborted at 1557975957 (unix time) try "date -d @1557975957" if you are using GNU date ***
+```
+
+##### Solution
+```
+date -d @1557975957
+```
+
+
+
 
 
 
