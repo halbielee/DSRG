@@ -17,6 +17,8 @@ CUDA Version: 10.0
 
 ### Installing DeepLab-V2
 
+See [DeepLab-v2](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/) code for setting. Following installation guide is for customized setting in CUDA10. This guide does not contain pretrained model or dataset url. You can see them in the official guide.
+
 #### 1. Creating nvidia-docker
 
 For docker environment setting of DSRG or Deeplab-v2, pull an image of docker and make a container of it. In here, pulls an official image of nvidia. Please see [here](https://hub.docker.com/r/nvidia/cuda) for nvidia docker image details.
@@ -225,3 +227,11 @@ This case, you are using Opencv under 3. Comment some line in Makefile.config.
 # Uncomment if you're using OpenCV 3
 # OPENCV_VERSION := 3
 ```
+
+
+
+
+
+### Installing DSRG
+
+See [here](https://github.com/speedinghzl/DSRG). If DeepLab-v2 is installed successfully, there would be no complicated problem in DSRG.
