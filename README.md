@@ -259,7 +259,23 @@ INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
 LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial
 ```
 
+##### 7) numpy error
 
+##### Error Message
+
+```
+python/caffe/_caffe.cpp:10:31: fatal error: numpy/arrayobject.h: No such file or
+ ```
+
+##### Solution
+Modify following lines in Makefile.config
+```
+# NOTE: this is required only if you will compile the python interface.
+# We need to be able to find Python.h and numpy/arrayobject.h.
+PYTHON_INCLUDE := /usr/include/python2.7 \
+		/usr/lib/python2.7/dist-packages/numpy/core/include \
+		/usr/local/lib/python2.7/dist-packages/numpy/core/include
+```
 
 
 ### Installing DSRG
