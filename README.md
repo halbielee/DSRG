@@ -242,7 +242,22 @@ This case, you are using Opencv under 3. Comment some line in Makefile.config.
 date -d @1557975957
 ```
 
+##### 6) hdf5 error
 
+##### Error Message
+
+```
+./include/caffe/util/io.hpp:8:18: fatal error: hdf5.h: no such file or directory
+ #include "hdf5.h"
+ ```
+
+##### Solution
+Modify following lines in Makefile.config
+```
+# Whatever else you find you need goes here.
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial
+```
 
 
 
